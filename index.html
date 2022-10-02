@@ -11,10 +11,51 @@
 
 <body>
 <h1>Use of mathjs Libraries</h1>
+
+<h2>Calculate Sqaure Root</h2>
+
+<form onsubmit="SqaureRoot(); return false">
+    <input type="number" id="SqrRoot" placeholder="enter any number to find Sqaure Root">
+    <br>
+    <button type="submit">Calculate Sqaure Root</button>
+</form>
+
+
+<h3 id="result1"></h3>
+<h2>Find Degree</h2>
+
+<form onsubmit="findDegree(); return false">
+    <input type="text" id="fDegree" placeholder="sin(45 deg^2)">
+    <br>
+    <button type="submit">Calculate Degree</button>
+</form>
+
+
+<h3 id="result2"></h3>
+
+
+<h2>Calculate Sqaure Root</h2>
+
+<h3 id="result3"></h3>
+
+
 <script>
     
 //////**********functions and constant************//////////////
 console.log("functions and constant")
+
+let SqaureRoot = () => {
+
+    let Sqaure = +document.querySelector("#SqrRoot").value;
+
+    let result = math.sqrt(Sqaure);
+    console.log(result);
+    document.querySelector("#result1").innerHTML = result;
+}
+
+
+
+
 
 
 console.log(math.log(10000, 10));
@@ -24,8 +65,26 @@ console.log(math.sqrt(8));
 
 console.log("expression")
 
+let findDegree = () => {
+
+let Degree = document.querySelector("#fDegree").value;
+
+let result = math.evaluate(Degree);
+
+
+console.log(result);
+document.querySelector("#result2").innerHTML = result;
+}
+
+
+
+
+
+
+
+
 console.log(math.evaluate('12 / (2.3 + 0.7)'));
-console.log(math.evaluate('sin(45 deg) ^ 2'));
+console.log(math.evaluate('sin(45 deg)^2'));
 
 //////**********chained operation************//////////////
 
