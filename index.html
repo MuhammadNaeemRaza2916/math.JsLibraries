@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UseOfMath.JsLibraries</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.2.1/math.js"></script>
+</head>
+
+<body>
+<h1>Use of mathjs Libraries</h1>
+<script>
+//////**********functions and constant************//////////////
+console.log("functions and constant")
+
+
+console.log(math.log(10000, 10));
+console.log(math.sqrt(8));
+
+//////**********expression************//////////////
+
+console.log("expression")
+
+console.log(math.evaluate('12 / (2.3 + 0.7)'));
+console.log(math.evaluate('sin(45 deg) ^ 2'));
+
+//////**********chained operation************//////////////
+
+console.log("chained operation")
+console.log(
+    math.chain(3)
+    .add(4)
+    .multiply(2)
+    .done()
+);
+
+
+</script>
+
+
+</body>
+
+</html>
